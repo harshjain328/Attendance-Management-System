@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="fy_a_weeklyreport" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[select * from fy_a_weeklyreport]]>
+	</queryString>
+	<field name="roll_no" class="java.lang.Integer"/>
+	<field name="wk1" class="java.lang.Integer"/>
+	<field name="wk2" class="java.lang.Integer"/>
+	<field name="wk3" class="java.lang.Integer"/>
+	<field name="wk4" class="java.lang.Integer"/>
+	<field name="wk5" class="java.lang.Integer"/>
+	<field name="wk6" class="java.lang.Integer"/>
+	<field name="wk7" class="java.lang.Integer"/>
+	<field name="wk8" class="java.lang.Integer"/>
+	<field name="wk9" class="java.lang.Integer"/>
+	<field name="wk10" class="java.lang.Integer"/>
+	<field name="wk11" class="java.lang.Integer"/>
+	<field name="wK12" class="java.lang.Integer"/>
+	<field name="wk13" class="java.lang.Integer"/>
+	<field name="wk14" class="java.lang.Integer"/>
+	<field name="wk15" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="66" backcolor="#000000"/>
+				<staticText>
+					<reportElement style="Title" x="169" y="0" width="370" height="66"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[FY A Attendance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="SubTitle" x="370" y="37" width="316" height="29"/>
+					<textElement textAlignment="Right">
+						<font size="22" isBold="false"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="70" width="802" height="32" forecolor="#000000" backcolor="#CC0000"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="658" y="12" width="144" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Roll no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="49" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="98" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="147" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="196" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="245" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="294" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="343" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="392" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="441" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="490" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="539" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="588" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wK12]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="637" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk13]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="686" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk14]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="735" y="0" width="49" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[wk15]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="797" height="18"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="0" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{roll_no}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="49" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="98" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="147" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="196" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="245" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk5}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="294" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk6}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="343" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk7}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="392" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk8}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="441" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk9}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="490" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk10}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="539" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk11}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="588" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wK12}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="637" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk13}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="686" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk14}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="###0" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="735" y="0" width="49" height="18"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{wk15}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="25" forecolor="#D0B48E" backcolor="#000000"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="757" y="3" width="40" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="677" y="3" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="3" width="197" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
