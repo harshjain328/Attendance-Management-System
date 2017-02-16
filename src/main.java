@@ -5,10 +5,7 @@
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
-/**
- *
- * @author Sahil Chanchad
- */import java.util.*;
+import java.util.*;
 import javax.swing.table.DefaultTableModel;
 import java.sql.ResultSet;
  import java.sql.*;
