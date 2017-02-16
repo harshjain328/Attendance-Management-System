@@ -1,7 +1,7 @@
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
- *
+ */
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.*;
